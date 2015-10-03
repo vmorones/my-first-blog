@@ -1,17 +1,19 @@
 <html>
     <head>
-        <title>Meridians&Parallels</title>
+        <title>Django Girls blog</title>
     </head>
     <body>
-    	<div>
-    	<h1>VeronicaMorones</h1>
-    	<h2><strong>About</strong></h2>
-    	<p>Hello</p>
-    	<a href="https://www.linkedin.com/in/veronicamorones
-		">LinkedIn</a></br>
-		<a href="https://instagram.com/crystalmethchristian/">Instagram</a>
+        <div>
+            <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
-
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks }}</p>
+            </div>
+        {% endfor %}
+                                   
     </body>
 </html>
